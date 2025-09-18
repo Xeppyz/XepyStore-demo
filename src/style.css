@@ -1,0 +1,61 @@
+/* Minimal styles for demo modal and button */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border-radius: .5rem;
+    padding: .6rem 1rem;
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.button:hover {
+    border-color: #646cff;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: color-mix(in oklab, black 60%, transparent);
+    padding: 1rem;
+}
+
+.modal>div {
+    width: 100%;
+    max-width: 28rem;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: .75rem;
+    overflow: hidden;
+}
+
+.modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .875rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+
+.modal__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.modal__close {
+    width: 2rem;
+    height: 2rem;
+    border-radius: .5rem;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: transparent;
+    color: white;
+}
+
+.modal__content {
+    padding: 1rem;
+    color: rgba(255, 255, 255, .9);
+}
