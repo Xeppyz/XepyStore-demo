@@ -9,9 +9,10 @@ export interface Product {
     inStock: boolean
 }
 
-const perfumesIds = ["20", "23", "24", "25", "26", "27", "28", "29", "31"]
+const perfumesIds = ["20", "23", "24", "25", "26", "27", "28", "29", "31", "32", "33"]
+const inStockIds = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "12", "13", "14", "15", "18", "10", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "33"]
 
-export const products: Product[] = Array.from({ length: 31 }, (_, i) => {
+export const products: Product[] = Array.from({ length: 33 }, (_, i) => {
     const index = i + 1
     return {
         id: index.toString(),
@@ -20,8 +21,8 @@ export const products: Product[] = Array.from({ length: 31 }, (_, i) => {
         category: perfumesIds.includes(index.toString()) ? "perfume" : "watch",
         image: `/shop-${index}.jpeg`,
         description: `Producto shop-${index}`,
-        brand: "Generic",
-        inStock: true,
+        brand: "Original",
+        inStock: inStockIds.includes(index.toString()),
     }
 })
 
